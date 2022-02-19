@@ -1,0 +1,3 @@
+# Project exclude paths
+/order/target/
+/payment-8081/target/
