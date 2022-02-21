@@ -17,6 +17,7 @@ import javax.annotation.Resource;
 public class PaymentController {
     @Resource
     private PaymentService service;
+
     @Value("${server.port}")
     private int server_port;
 
