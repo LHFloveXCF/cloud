@@ -11,6 +11,7 @@
         <module>payment-8081</module>
         <module>order</module>
         <module>api-commons</module>
+        <module>eureka-server-7001</module>
     </modules>
 
     <packaging>pom</packaging>
