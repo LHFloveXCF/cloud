@@ -12,6 +12,7 @@
         <module>order</module>
         <module>api-commons</module>
         <module>eureka-server-7001</module>
+        <module>eureka-server-7002</module>
     </modules>
 
     <packaging>pom</packaging>
