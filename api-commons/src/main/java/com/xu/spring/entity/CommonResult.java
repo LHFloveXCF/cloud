@@ -1,4 +1,4 @@
-package com.xu.spring.order.entity;
+package com.xu.spring.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

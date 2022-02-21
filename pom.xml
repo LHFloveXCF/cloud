@@ -10,6 +10,7 @@
     <modules>
         <module>payment-8081</module>
         <module>order</module>
+        <module>api-commons</module>
     </modules>
 
     <packaging>pom</packaging>

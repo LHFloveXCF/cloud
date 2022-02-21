@@ -1,4 +1,4 @@
-package com.xu.spring.order.config;
+package com.xu.spring.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
