@@ -5,6 +5,7 @@ import com.xu.spring.order.entity.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -24,11 +25,13 @@ public class OrderController {
 
     @GetMapping(value = "/consumer/payment/save")
     public CommonResult save(Payment payment) {
-        return template.getForObject(PAYMENT_URL + "save/", CommonResult.class, payment);
+        log.info("hello world");
+        return template.postForObject(PAYMENT_URL + "save/", payment, CommonResult.class);
+        // return template.getForObject(PAYMENT_URL + "save/", CommonResult.class, payment);
     }
 
     @GetMapping(value = "/consumer/payment/get/{id}")
-    public CommonResult save(@PathVariable Long id) {
+    public CommonResult save(@PathVariable("id") Long id) {
         return template.getForObject(PAYMENT_URL + "get/" + id, CommonResult.class);
     }
 }
