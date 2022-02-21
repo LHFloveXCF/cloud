@@ -13,6 +13,12 @@
 
 
     <dependencies>
+        <!--eureka客户端依赖包-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--公共模块依赖包-->
         <dependency>
             <groupId>com.xu.spring</groupId>
             <artifactId>api-commons</artifactId>

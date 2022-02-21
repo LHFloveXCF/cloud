@@ -1,2 +1,12 @@
 server:
   port: 80
+
+spring:
+  application:
+    name: oredr
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
