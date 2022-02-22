@@ -16,6 +16,7 @@
         <module>payment-8082</module>
         <module>payment-8084</module>
         <module>order-zk-80</module>
+        <module>payment-8086</module>
     </modules>
 
     <packaging>pom</packaging>
