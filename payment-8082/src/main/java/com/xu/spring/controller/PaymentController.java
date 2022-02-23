@@ -42,4 +42,8 @@ public class PaymentController {
         return new CommonResult(444, "查询数据失败");
     }
 
+    @GetMapping(value = "payment/myLB")
+    public Object getServerPort() {
+        return server_port + "";
+    }
 }

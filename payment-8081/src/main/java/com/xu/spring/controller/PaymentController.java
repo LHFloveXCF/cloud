@@ -59,4 +59,9 @@ public class PaymentController {
         }
         return "";
     }
+
+    @GetMapping(value = "payment/myLB")
+    public Object getServerPort() {
+        return server_port + "";
+    }
 }

@@ -10,6 +10,10 @@ spring:
     url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: 123456
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - VMware.* # 忽略虚拟网卡
 
 eureka:
   client:
@@ -21,8 +25,8 @@ eureka:
   instance:
     instance-id: payment8081
     prefer-ip-address: true
-    lease-expiration-duration-in-seconds: 1
-    lease-renewal-interval-in-seconds: 2
+#    lease-expiration-duration-in-seconds: 1
+#    lease-renewal-interval-in-seconds: 2
 mybatis:
   mapper-locations: classpath:mapper/*xml
   type-aliases-package: com.xu.spring.entity
