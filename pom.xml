@@ -18,6 +18,7 @@
         <module>order-zk-80</module>
         <module>payment-8086</module>
         <module>order-consul-80</module>
+        <module>order-fegin-80</module>
     </modules>
 
     <packaging>pom</packaging>
