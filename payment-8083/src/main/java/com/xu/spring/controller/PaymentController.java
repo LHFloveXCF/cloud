@@ -23,11 +23,6 @@ public class PaymentController {
 
     @GetMapping(value = "/payment/timeOut")
     public String timeOut() {
-        try {
-            Thread.sleep(5000L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return service.timeOut();
     }
 }
