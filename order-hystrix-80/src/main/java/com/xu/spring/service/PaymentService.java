@@ -12,6 +12,11 @@ public class PaymentService {
     }
 
     public String timeOut() {
+        try {
+            Thread.sleep(5000L);
+        } catch (InterruptedException e) {
+            // e.printStackTrace();
+        }
         return "当前线程：" + Thread.currentThread().getName() + "超时了！";
     }
 }
