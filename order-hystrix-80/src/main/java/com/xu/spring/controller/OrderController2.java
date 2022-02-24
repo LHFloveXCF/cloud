@@ -19,7 +19,6 @@ public class OrderController2 {
     private PaymentService2 service2;
 
     @GetMapping(value = "/consumer/payment/timeOut3")
-    @HystrixCommand
     public String timeOut(){
         log.info("hello time out hystrix");
         return service2.paymentInfo_TimeOut();

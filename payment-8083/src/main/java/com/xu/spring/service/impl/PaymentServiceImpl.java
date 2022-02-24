@@ -23,7 +23,7 @@ public class PaymentServiceImpl implements PaymentService {
     })
     @Override
     public String timeOut() {
-        // int age = 10 / 0;
+        int age = 10 / 0;
         try {
             // TimeUnit.MILLISECONDS.sleep(5000L);
             // Thread.sleep(5000L);
