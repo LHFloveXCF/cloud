@@ -1,5 +1,6 @@
 package com.xu.spring.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.xu.spring.service.PaymentService;
@@ -17,6 +18,7 @@ import javax.annotation.Resource;
  */
 @RestController
 @Slf4j
+@DefaultProperties(defaultFallback  = "globalFallBack")
 public class OrderController {
 
     @Resource
@@ -38,5 +40,15 @@ public class OrderController {
     //兜底方法
     public String paymentTimeOutFallbackMethod(){
         return "我是消费者80，对付支付系统繁忙请10秒钟后再试或者自己运行出错请检查自己,(┬＿┬)";
+    }
+
+    @GetMapping(value = "/consumer/payment/timeOut2")
+    @HystrixCommand
+    public String paymentInfo_TimeOut2(){
+        return service.timeOut();
+    }
+
+    public String globalFallBack(){
+        return "我是消费者80，我是一个全局兜底方法";
     }
 }
